@@ -1,0 +1,39 @@
+A python application to develop 4 type of features at household level.
+
+Script: main.py
+Unit Test script: test_main.py
+Input file: demographics.csv, hh_ind.sv, transactions.csv
+Requirement.txt = to install all the required packages
+README = to follow the instructions
+Output file = household_features.csv (in .CSV format)
+
+#application was developed on PyCharm using venv
+
+1. All the input files must be located in the same folder as script and unit test script.
+2. The output file will be generated in the same folder where input files and python script is located.
+3. The output file contains features at the household level through columns depicting:
+    All the demographic features:
+        hhid,
+        num_inds,
+        children_ind,
+        hh_income_ind,
+        age_ind,
+        home_value_ind,
+        state,
+    Total amount of dollars spent before the campaign period:
+        total_amount_before_campaign
+    Total amount of dollars spent during the campaign period:
+        total_amount_during_campaign
+    Total number of transactions:
+        total_transactions
+4. Column 'hhid' shows only those house ids which made transactions
+
+
+I used Dask parallel programming library to utilize it's ability to run on distributed cluster.
+Considering the size of input bigdata files, we can use chunksize to load file into Pandas dataframe.
+With this type of project, Dask is a better option as it's lightweight and the project don't not require heavy computations.
+As dask utilizes Pandas API, I found it beneficial to use Dask to utilize capabilities of Pandas while using Dask.
+Dask also provides data analysis ability for billion of rows with faster processing, hence great to use in Data Science.
+
+If the input datafiles were in terabytes, I would have used an instance of Postgres or MongoDB to do the heavy computations and generate reports through DB API.
+At the time of submission, the application is taking approx. 4 seconds to execute.

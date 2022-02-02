@@ -1,0 +1,10 @@
+Problem Statement: Take the provided randomly generated datasets (demographics, transactions, household-individual mapping), and combine them to get one dataset at the household level. Using development techniques that you would apply in a production big data workflow, generate a table containing features that would be useful to measure the effectiveness of a campaign that was run from 2021-09-06 to 2021-09-13. Assume the transactions table will not exceed 100 MB, and the other tables could go over 10 GB. Data sent for this project is clean, however checks can be included as part of the production script. Also, be sure to specify the format in which the final table will be stored.
+
+Household-Level Features to Generate:
+●	All the demographic features provided
+●	Total amount of dollars spent before the campaign period
+●	Total amount of dollars spent during the campaign period
+●	Total number of transactions
+
+
+
